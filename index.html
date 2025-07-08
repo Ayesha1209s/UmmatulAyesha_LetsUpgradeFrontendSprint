@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HackVerse 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2620/2620769.png" alt="Hackathon Icon" />
+    <h1 class="fade-in">DESIGN'THON 2025</h1>
+    <p class="fade-in-delay">Powered by Let's Upgrade | Designed by Ummatul Ayesha</p>
+  </header>
+
+  <section class="section main-hero">
+    <img src="images/updatedlogo.jpg" alt="updatedlogo" class="slide-in" />
+    <h2>Join the Ultimate Hackathon</h2>
+    <p>08 - 10 July 2025 | Registrations Open Now!</p>
+    <div class="countdown" id="countdown">⏳ Loading countdown...</div>
+    <a href="#" class="btn">Apply via Devfolio</a>
+    <a href="#" class="btn">Join Discord</a>
+  </section>
+
+  <section class="section register">
+    <h2>📝 Register Now</h2>
+    <form class="register-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" placeholder="College/Organization" required />
+      <textarea placeholder="Why do you want to join?" rows="4" required></textarea>
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+
+  <section class="section faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>Is it online or offline?</strong>
+      It's a fully online hackathon – join from anywhere!
+    </div>
+    <div class="faq-item">
+      <strong>Can beginners participate?</strong>
+      Absolutely! We welcome beginners with open arms 🤗
+    </div>
+    <div class="faq-item">
+      <strong>Is there any registration fee?</strong>
+      No, it's 100% free to participate.
+    </div>
+  </section>
+
+  <section class="section team">
+    <h2>👩‍💻 Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://img.freepik.com/premium-vector/portrait-business-woman_505024-2781.jpg" alt="Ayesha" />
+        <h4>Ayesha</h4>
+        <p>Designer & Organizer</p>
+      </div>
+      <div class="team-member">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfKixh8cZpRcfdi8eG9u-oKEm0CwZfh428Hw&s" alt="Safiqua" />
+        <h4>Safiqua</h4>
+        <p>Web & Dev Lead</p>
+      </div>
+      <div class="team-member">
+        <img src="https://img.pikbest.com/png-images/20241009/professional-corporate-woman-icon-_10941890.png!sw800" alt="Marufa" />
+        <h4>Marufa</h4>
+        <p>Mentorship & Content</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact">
+    <h2>📬 Contact Us</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Ummatul Ayesha | Contact: <a href="mailto:ummatul@example.com">ummatul@example.com</a>
+  </footer>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("july 10, 2025 09:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        countdown.innerHTML = "🎉 The event is LIVE!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `⏳ Ends in: ${days}d ${hours}h ${mins}m ${secs}s`;
+    };
+
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>

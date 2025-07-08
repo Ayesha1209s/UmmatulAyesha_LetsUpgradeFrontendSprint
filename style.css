@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #CC66DA, #FAEB92);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2b2b52;
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: relative;
+}
+
+header img {
+  width: 80px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: rotate 5s linear infinite;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-in-delay {
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 1.8s ease-out;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.main-hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #FFFCFB;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff007a;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: bold;
+  margin: 10px;
+  box-shadow: 0 0 12px rgba(255, 0, 122, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e6006e;
+  transform: scale(1.05);
+}
+
+.countdown {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin: 25px 0;
+}
+
+.register-form,
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.register-form input,
+.register-form textarea,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #2b2b52;
+  color: #fff;
+  font-size: 15px;
+}
+
+.register-form button,
+.contact-form button {
+  background: #000000;
+  color: #FFFCFB;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-form button:hover,
+.contact-form button:hover {
+  background: #000000;
+}
+
+.faq {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: #222248;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.faq-item strong {
+  display: block;
+  color:#ffffff;
+  margin-bottom: 8px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  max-width: 750px;
+  margin: auto;
+}
+
+.team-member {
+  background: #1e1e3f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.team-member img {
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #121233;
+  color: #FFFCFB;
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+footer a {
+  color: #FFFCFB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  header img {
+    width: 60px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+}
